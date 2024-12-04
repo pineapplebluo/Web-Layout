@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网页主体</title>
+    <!-- 样式初始化 -->
+     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+        }
+        /* 防止浏览器不是满浏览器显示 */
+        .main{
+            /* 让整个网页居中 */
+            margin:auto;
+        }
+
+        .header,.nav,.container,.footer{
+            /* 四个盒子左浮动 */
+            float: left;
+            /* 充满浏览器 */
+            width: 100%;
+            /* 取消内边距影响盒子大小 */
+            box-sizing: border-box;
+        }
+        .header{
+            background-color:#ccc;
+            padding: 20px;
+            text-align: center;
+        }
+      
+        .nav{
+            background-color: dimgray;
+            height: 40px;
+        }
+        .nav a{ 
+            display: inline-block;          
+            color: white;
+            padding:0px 20px;
+            line-height: 40px;
+        }
+        .nav a:hover{
+            background-color: #ccc;
+            color: black;
+        }
+        /* 左右两栏固定宽度200 */
+        .lside{
+            width: 200px;
+            float: left;
+        }
+        .lside h2{
+            text-align: center;
+        }
+        .rside{
+            width: 200px;
+            float: right;
+        }
+        .rside h2{
+            text-align: center;
+        }
+        /* 给中间栏设置左右边距防止串栏 */
+        .centent{
+            margin: 0px 205px;
+        }
+        .centent h2{
+            text-align: center;
+        }
+        .lside,.rside,.centent{
+            padding: 5px ;
+            /* 取消内边距影响盒子大小 */
+            box-sizing: border-box;
+        }
+        .footer{
+            padding: 10px;
+            background-color: #ccc;
+            text-align: center;
+        }
+        /* 响应式布局 */
+        /* 当屏幕宽度小于768px时，三栏进行竖排 */
+        @media screen and (max-width: 768px){
+            .lside,.rside,.centent{
+                width: 100%;
+                /* 取消中间栏左右边距，以正常显示*/
+                margin: 0;
+                float: none;
+                display: block;
+            }
+        }
+        </style>
+</head>
+<body>
+  <div class="main">
+    <div class="header">
+        <h1>网页头部</h1>
+        <p>这里主要放网站logo或者banner广告</p>
+    </div>
+    <div class="nav">
+        <a href="#">导航栏</a>
+        <a href="#">导航栏</a>
+        <a href="#">导航栏</a>
+        <a href="#">导航栏</a>
+    </div>
+    <div class="container">
+        <!--主体放入三个盒子，左中右用margin进行三栏布局--
+       中间的栏会自适应，所以放在第三个 -->
+        <div class="lside">
+            <h2>左边栏</h2>
+            <p>
+            左边栏的主要内容左边栏的主要内容左边栏的主要内容
+            左边栏的主要内容左边栏的主要内容左边栏的主要内容
+            左边栏的主要内容左边栏的主要内容左边栏的主要内容
+            左边栏的主要内容左边栏的主要内容左边栏的主要内容
+          </p>
+        </div>
+        <div class="rside">
+            <h2>右边栏</h2>
+            <p>
+            右边栏的主要内容右边栏的主要内容右边栏的主要内容
+            右边栏的主要内容右边栏的主要内容右边栏的主要内容
+            右边栏的主要内容右边栏的主要内容右边栏的主要内容
+            右边栏的主要内容右边栏的主要内容右边栏的主要内容
+            </p>
+        </div>
+        <div class="centent">
+            <h2>中间栏</h2>
+            <p>
+            中间栏的主要内容中间栏的主要内容中间栏的主要内容
+            中间栏的主要内容中间栏的主要内容中间栏的主要内容
+            中间栏的主要内容中间栏的主要内容中间栏的主要内容
+            中间栏的主要内容中间栏的主要内容中间栏的主要内容
+            </p>
+        </div>
+
+    </div>
+    <div class="footer">
+        <p>网页底部,主要放版权声明，备案信息，联系方式等</p>
+    </div>
+    </div>
+
+</body>
+</html>
